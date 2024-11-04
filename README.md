@@ -36,7 +36,7 @@ The project files are organized as follows:
 - `results/`: Stores output files, including filtered, normalized, and batch-corrected data in `.h5ad` format.
 - `notebooks/`: Jupyter notebooks detailing each analysis step.
 - `scripts/`: Contains Python scripts used for batch processing and analysis automation.
-- `.gitignore`: Configured to exclude large files and intermediate analysis files.
+
   
 ## Key Dependencies
 
