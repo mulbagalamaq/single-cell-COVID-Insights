@@ -88,6 +88,7 @@ The goal of this project was to identify differential gene expression patterns, 
 │   ├── Jupyter notebooks detailing each analysis step
 ├── scripts/
 │   ├── Python scripts for batch processing and analysis automation
+```
 
 ## Key Dependencies
 
@@ -106,6 +107,7 @@ To install the required dependencies, run:
 
 ```bash
 pip install scanpy scrublet seaborn matplotlib pandas numpy scikit-learn gseapy
+```
 
 ## Key Findings
 
