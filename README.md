@@ -79,23 +79,9 @@ Differential Expression → Pathway Analysis
 - **9,000 cells initially**, 5,312 after QC
 - **17,993 genes** detected after filtering
 
-### Software Stack
-```
-Python 3.10
-Scanpy 1.9.0
-Pandas 2.2.0
-NumPy 1.26.0
-Seaborn 0.11.0
-GSEApy 0.12.0
-Statsmodels 0.14.0
-```
 
-### Performance
-- **Processing time**: ~1 minute
-- **Memory usage**: 16 GB RAM
-- **Statistical power**: 85%
 
-## Key Findings
+
 
 ### Upregulated in COVID-19
 | Gene | Log2FC | Function |
@@ -135,22 +121,7 @@ The analysis reveals a robust immune response signature in COVID-19 patients:
 
 4. **Monocyte Activation**: Increased expression of inflammatory cytokines and enhanced phagocytic activity.
 
-## Repository Structure
 
-```
-single-cell-COVID-Insights/
-├── data/
-│   ├── raw/                    # Raw 10x data
-│   └── processed/              # Processed files
-├── plots/                      # All visualizations
-├── results/                    # Analysis outputs
-├── scripts/
-│   ├── enhanced_analysis.py    # Main pipeline
-│   └── config.yaml            # Parameters
-└── README.md
-```
-
-## Getting Started
 
 ### Setup Environment
 ```bash
@@ -159,47 +130,6 @@ conda activate covid_scrnaseq
 pip install -r requirements.txt
 ```
 
-### Run Analysis
-```bash
-python enhanced_analysis.py
-```
 
-### Generate Plots
-```bash
-python create_individual_plots.py
-```
 
-## What This Shows
 
-This analysis demonstrates:
-- **Advanced scRNA-seq processing** with proper QC and statistical validation
-- **Comprehensive differential expression analysis** with effect sizes and power analysis
-- **Multi-database pathway enrichment** for biological interpretation
-- **Publication-ready visualizations** with proper annotations
-- **Reproducible workflow** with version-controlled parameters
-
-## Limitations
-
-- Small sample size (n=6) limits generalizability
-- No clinical metadata available for severity correlation
-- Cross-sectional design (no longitudinal data)
-- Limited cell type annotation without marker gene validation
-
-## Future Work
-
-- Validate findings in larger cohorts
-- Integrate with clinical metadata
-- Perform cell type-specific analysis
-- Compare with other COVID-19 scRNA-seq studies
-
-## Contact
-
-**Author**: [Your Name]  
-**Email**: [your.email@institution.edu]  
-**GitHub**: [https://github.com/mulbagalamaq](https://github.com/mulbagalamaq)
-
----
-
-*This analysis was performed as part of my bioinformatics portfolio to demonstrate scRNA-seq analysis skills. All code is reproducible and well-documented.*
-
-**Last updated**: July 2024
