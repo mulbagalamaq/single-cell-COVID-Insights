@@ -1,0 +1,76 @@
+# COVID-19 scRNA-seq Analysis Configuration
+# Version: 1.0
+# Date: June 2024
+
+analysis_parameters:
+  quality_control:
+    min_genes: 200
+    min_counts: 1000
+    max_mito_pct: 20
+    min_cells: 3
+    outlier_detection: true
+    batch_effect_assessment: true
+  
+  preprocessing:
+    normalization_target: 10000
+    log_transform: true
+    scale_data: true
+    highly_variable_genes: true
+    n_top_genes: 2000
+  
+  dimensionality_reduction:
+    pca_n_comps: 50
+    neighbors_n_neighbors: 15
+    neighbors_n_pcs: 40
+    umap_n_neighbors: 15
+    umap_min_dist: 0.5
+    tsne_perplexity: 30
+  
+  clustering:
+    method: "leiden"
+    resolution: 1.0
+    neighbors: 15
+    random_state: 42
+  
+  differential_expression:
+    method: "wilcoxon"
+    alpha: 0.05
+    multiple_testing: "benjamini-hochberg"
+    min_cells: 10
+    effect_size_calculation: true
+  
+  pathway_analysis:
+    databases:
+      - "KEGG_2021_Human"
+      - "GO_Biological_Process_2021"
+      - "GO_Molecular_Function_2021"
+      - "Reactome_2022"
+      - "WikiPathways_2021_Human"
+      - "MSigDB_Hallmark_2020"
+    organism: "Human"
+    fdr_threshold: 0.05
+  
+  visualization:
+    dpi: 300
+    style: "seaborn-v0_8-whitegrid"
+    color_palette: "husl"
+    figure_size: [12, 8]
+    save_format: "png"
+  
+  reproducibility:
+    random_seed: 42
+    log_analysis: true
+    save_intermediate: true
+    version_control: true
+
+data_paths:
+  raw_data: "data/raw/"
+  processed_data: "data/processed/"
+  results: "results/"
+  plots: "plots/"
+  logs: "logs/"
+
+output_settings:
+  create_directories: true
+  overwrite_existing: false
+  compress_output: true 

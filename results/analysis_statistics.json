@@ -1,0 +1,33 @@
+{
+  "qc_stats": {
+    "total_cells_before": 9000,
+    "outliers_detected": 479.0,
+    "outlier_percentage": 5.322222222222222,
+    "gene_outliers": 89.0,
+    "umi_outliers": 479.0
+  },
+  "batch_effects": {
+    "f_statistic": 52.722262864930784,
+    "p_value": 4.196904568771885e-54,
+    "significant": true
+  },
+  "de_stats": {
+    "total_genes": 17993,
+    "significant_genes": 3120.0,
+    "highly_significant": 2557.0,
+    "upregulated": 2927.0,
+    "downregulated": 2847.0,
+    "mean_effect_size": 0.5717654906565826
+  },
+  "power_stats": {
+    "median_effect_size": 0.04174482307197816,
+    "required_sample_size": 4505.952073781912,
+    "current_power": 0.575614129994433
+  },
+  "pathway_stats": {
+    "total_pathways_tested": 8215,
+    "significant_pathways": 1720,
+    "databases_analyzed": 5
+  },
+  "processing_time": 60.79075479507446
+}
